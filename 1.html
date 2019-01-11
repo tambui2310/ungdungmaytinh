@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiện ích máy tính online</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text"  id="a">
+        <input type="text"  id="b">
+        <div class="box-button">
+           
+            <button onclick = "cong2so() ;">addition(+)</button>
+            <button onclick = "tru2so();">subtraction(-)</button>
+            <button onclick = "nhan2so();">multiplication(x)</button>
+            <button onclick = "chia2so();">division(/)</button>
+            
+        </div>
+    </div>    
+            <h1 id="ketqua"></h1>
+    <script type="text/javascript">
+        function cong2so() {
+            var a=parseInt(document.getElementById("a").value);
+            var s=parseInt(document.getElementById("b").value);
+            var tong = a+s;
+            document.write("Tổng = "+ tong);
+        }
+        function tru2so() {
+            var a=parseInt(document.getElementById("a").value);
+            var s=parseInt(document.getElementById("b").value);
+            var hieu = a-s;
+            document.write("Hiệu = "+ hieu);
+        }
+        function nhan2so() {
+            var a=parseInt(document.getElementById('a').value);
+            var s=parseInt(document.getElementById('b').value);
+            var nhan = a*s;
+            document.write("Tích = " + nhan);
+        }
+        function chia2so() {
+            var a=parseInt(document.getElementById('a').value);
+            var s=parseInt(document.getElementById('b').value);
+            var chia=a/s;
+            if (s!==0)
+                document.write("Thương = " + chia);
+            else 
+                document.write("Không chia được");
+        }
+    </script>
+</body>
+</html>
